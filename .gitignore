@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+*.sln
+CommentRemover/CommentRemover/CommentRemover.vcxproj.filters
+CommentRemover/CommentRemover/CommentRemover.vcxproj
+CommentRemover/.vs/CommentRemover/v15/ipch/AutoPCH/COMMENTREMOVER-1ed1bed9/ICOMMENTREMOVER-2008bd19/ICOMMENTREMOVER.ipch
+CommentRemover/.vs/CommentRemover/v15/ipch/AutoPCH/COMMENTREMOVER-1ed1bed9/CPPCOMMENTREMOVER-2c15d9f3/CPPCOMMENTREMOVER.ipch
+CommentRemover/.vs/CommentRemover/v15/ipch/AutoPCH/COMMENTREMOVER-1ed1bed9/COMMENTREMOVERCREATOR-1e68e780/COMMENTREMOVERCREATOR.ipch
+CommentRemover/.vs/CommentRemover/v15/Browse.VC.opendb
+CommentRemover/.vs/CommentRemover/v15/Browse.VC.db
+CommentRemover/.vs/CommentRemover/v15/.suo
