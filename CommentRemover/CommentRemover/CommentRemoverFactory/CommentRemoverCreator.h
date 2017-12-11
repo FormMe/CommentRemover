@@ -22,7 +22,7 @@ public:
 		case python:
 			break;
 		default:
-			break;
+			throw std::invalid_argument("Unknown language");
 		}
 	}
 };
