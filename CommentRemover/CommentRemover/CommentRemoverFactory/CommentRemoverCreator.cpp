@@ -1,12 +1,15 @@
 #include "CommentRemoverCreator.h"
 
 
-
-CommentRemoverCreator::CommentRemoverCreator()
+ICommentRemover * CommentRemoverCreator::Create(Language lang)
 {
-}
-
-
-CommentRemoverCreator::~CommentRemoverCreator()
-{
+	switch (lang)
+	{
+	case cpp:
+		return new CppCommentRemover();
+	case python:
+		break;
+	default:
+		throw std::invalid_argument("Unknown language");
+	}
 }

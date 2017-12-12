@@ -2,14 +2,11 @@
 #include <map>
 #include <string>
 
-#include "CommentRemoverFactory\CommentRemoverCreator.h"
+#include "..\CommentRemoverFactory\CommentRemoverCreator.h"
 
 class ArgvParser
 {
 public:
-	ArgvParser();
-	~ArgvParser();
-
 	void Parse(int argc, char* argv[]);
 
 	Language lang;
@@ -20,4 +17,3 @@ private:
 	std::ifstream inputStream;
 	std::ofstream outputStream;
 };
-

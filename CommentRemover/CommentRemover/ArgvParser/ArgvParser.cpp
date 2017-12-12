@@ -1,14 +1,6 @@
 #include "ArgvParser.h"
 
 
-ArgvParser::ArgvParser()
-{
-}
-
-ArgvParser::~ArgvParser()
-{
-}
-
 void ArgvParser::Parse(int argc, char * argv[])
 {
 	if (argc != 4) throw std::invalid_argument("Invalid arguments count");

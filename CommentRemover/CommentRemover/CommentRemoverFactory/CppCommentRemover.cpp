@@ -1,17 +1,8 @@
-#include "CppCommentRemover.h"
+#include "ICommentRemover.h"
+#include "../Context/Context.h"
 
-
-
-CppCommentRemover::CppCommentRemover()
+void CppCommentRemover::remove(std::ifstream &input, std::ofstream &output)
 {
-}
-
-
-CppCommentRemover::~CppCommentRemover()
-{
-}
-
-void CppCommentRemover::remove(std::ifstream & input, std::ofstream & output)
-{
-	output << "lol";
+	Context c(input, output);
+	
 }
