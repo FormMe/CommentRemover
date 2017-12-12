@@ -8,7 +8,7 @@ class Context
 public:
 	Context(std::ifstream & input, std::ofstream & output);
 
-	void set_state(ICodeState* state);
+	void set_state(ICodeState* );
 	void handle();
 	std::ifstream& getInputStream();
 	std::ofstream& getOutputStream();
@@ -31,13 +31,7 @@ public:
 	void handle(Context *) override;
 };
 
-class CommentStart : public ICodeState
-{
-public:
-	void handle(Context *) override;
-};
-
-class OneLineComment : public ICodeState
+class SingleLineComment : public ICodeState
 {
 public:
 	void handle(Context *) override;

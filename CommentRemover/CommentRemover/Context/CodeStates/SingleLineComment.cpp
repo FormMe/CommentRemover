@@ -1,7 +1,7 @@
-#include "../Context/Context.h"
+#include "../Context.h"
 
 
-void OneLineComment::handle(Context *context)
+void SingleLineComment::handle(Context *context)
 {
 	auto &input = context->getInputStream();
 	auto &output = context->getOutputStream();

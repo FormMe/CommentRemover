@@ -10,6 +10,6 @@ enum Language
 class CommentRemoverCreator
 {
 public:
-	static ICommentRemover* Create(Language lang);
+	static ICommentRemover* Create(Language );
 };
 

@@ -8,7 +8,7 @@ ICommentRemover * CommentRemoverCreator::Create(Language lang)
 	case cpp:
 		return new CppCommentRemover();
 	case python:
-		break;
+		throw std::invalid_argument("Not implemented");
 	default:
 		throw std::invalid_argument("Unknown language");
 	}
