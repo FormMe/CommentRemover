@@ -28,20 +28,23 @@ public:
 class PureCode : public ICodeState
 {
 public:
-	PureCode();
+	void handle(Context *) override;
+};
+
+class CommentStart : public ICodeState
+{
+public:
 	void handle(Context *) override;
 };
 
 class OneLineComment : public ICodeState
 {
 public:
-	OneLineComment();
 	void handle(Context *) override;
 };
 
 class MultLineComment : public ICodeState
 {
 public:
-	MultLineComment();
 	void handle(Context *) override;
 };

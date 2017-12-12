@@ -13,7 +13,10 @@ void Context::set_state(ICodeState* state)
 
 void Context::handle()
 {
-	_state->handle(this);
+	while (_state)
+	{
+		_state->handle(this);
+	}
 }
 
 std::ifstream & Context::getInputStream()
