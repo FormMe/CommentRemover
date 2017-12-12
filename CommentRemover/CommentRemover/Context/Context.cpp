@@ -1,11 +1,10 @@
 #include "Context.h"
 
 
-Context::Context(std::ifstream & inputStream,std::ofstream & outputStream) :
-	_state(new PureCodeState(this)),
+Context::Context(std::ifstream & inputStream, std::ofstream & outputStream) :
 	input(inputStream),
-	output(outputStream)
-{}
+	output(outputStream),
+	_state(new PureCode()) {}
 
 void Context::set_state(ICodeState* state)
 {
@@ -14,7 +13,7 @@ void Context::set_state(ICodeState* state)
 
 void Context::handle()
 {
-	_state->handle();
+	_state->handle(this);
 }
 
 std::ifstream & Context::getInputStream()
