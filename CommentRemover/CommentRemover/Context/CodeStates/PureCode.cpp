@@ -20,7 +20,7 @@ void PureCode::handle(Context *context)
 			switch (cs)
 			{
 			case '/':
-				context->set_state(new OneLineComment());
+				context->set_state(new SingleLineComment());
 				return;
 			case '*':
 				context->set_state(new MultLineComment());
