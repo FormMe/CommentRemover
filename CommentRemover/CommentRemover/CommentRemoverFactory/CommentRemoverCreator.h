@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include "ICommentRemover.h"
 
 enum Language
@@ -10,6 +11,6 @@ enum Language
 class CommentRemoverCreator
 {
 public:
-	static ICommentRemover* Create(Language );
+	static std::unique_ptr<ICommentRemover> Create(Language );
 };
 

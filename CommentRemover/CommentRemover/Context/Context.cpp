@@ -4,16 +4,16 @@
 Context::Context(std::ifstream & inputStream, std::ofstream & outputStream) :
 	input(inputStream),
 	output(outputStream),
-	_state(new PureCode()) {}
+	_state(std::make_unique<PureCode>()) {}
 
-void Context::set_state(ICodeState* state)
+void Context::set_state(std::unique_ptr<ICodeState> state)
 {
-	_state = state;
+	_state = std::move(state);
 }
 
 void Context::handle()
 {
-	while (_state) _state->handle(this);
+	while (_state) _state->handle(*this);
 }
 
 std::ifstream & Context::getInputStream()
