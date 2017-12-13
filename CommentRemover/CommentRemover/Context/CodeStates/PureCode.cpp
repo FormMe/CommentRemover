@@ -9,8 +9,9 @@ void PureCode::handle(Context &context)
 	while (!input.eof())
 	{
 		cf = input.get();
-		if (cf == '/')
+		switch (cf)
 		{
+		case '/':
 			cs = input.get();
 			switch (cs)
 			{
@@ -20,21 +21,24 @@ void PureCode::handle(Context &context)
 			case '*':
 				context.set_state(std::make_unique<MultLineComment>());
 				return;
-			case '\'':
-				context.set_state(std::make_unique<SingleQuote>());
-				return;
-			case '\"':
-				context.set_state(std::make_unique<DoubleQuote>());
-				return;
 			default:
 				output.put(cf);
 				if (cs != EOF) output.put(cs);
 				break;
 			}
-		}
-		else
-		{
+			break;
+
+		case '\'':
+			context.set_state(std::make_unique<SingleQuote>());
 			output.put(cf);
+			return;
+		case '\"':
+			context.set_state(std::make_unique<DoubleQuote>());
+			output.put(cf);
+			return;
+		default:
+			output.put(cf);
+			break;
 		}
 	}
 	context.set_state(nullptr);
