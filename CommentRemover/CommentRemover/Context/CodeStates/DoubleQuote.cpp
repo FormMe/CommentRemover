@@ -10,7 +10,7 @@ void DoubleQuote::handle(Context &context)
 	{
 		c = input.get();
 		output.put(c);
-		if (c == '"')
+		if (c == '\"')
 		{
 			context.set_state(std::make_unique<PureCode>());
 			return;

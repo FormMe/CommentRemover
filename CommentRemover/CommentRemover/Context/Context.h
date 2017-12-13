@@ -9,7 +9,7 @@ class Context
 public:
 	Context(std::ifstream & input, std::ofstream & output);
 
-	void set_state(std::unique_ptr<ICodeState> );
+	void set_state(std::unique_ptr<ICodeState>);
 	void handle();
 	std::ifstream& getInputStream();
 	std::ofstream& getOutputStream();

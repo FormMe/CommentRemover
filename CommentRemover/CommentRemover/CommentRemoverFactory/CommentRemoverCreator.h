@@ -11,6 +11,6 @@ enum Language
 class CommentRemoverCreator
 {
 public:
-	static std::unique_ptr<ICommentRemover> Create(Language );
+	static std::unique_ptr<ICommentRemover> Create(Language);
 };
 
