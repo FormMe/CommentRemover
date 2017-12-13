@@ -20,6 +20,12 @@ void PureCode::handle(Context &context)
 			case '*':
 				context.set_state(std::make_unique<MultLineComment>());
 				return;
+			case '\'':
+				context.set_state(std::make_unique<SingleQuote>());
+				return;
+			case '\"':
+				context.set_state(std::make_unique<DoubleQuote>());
+				return;
 			default:
 				output.put(cf);
 				if (cs != EOF) output.put(cs);

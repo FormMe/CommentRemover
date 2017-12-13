@@ -32,6 +32,18 @@ public:
 	void handle(Context &) override;
 };
 
+class SingleQuote : public ICodeState
+{
+public:
+	void handle(Context &) override;
+};
+
+class DoubleQuote : public ICodeState
+{
+public:
+	void handle(Context &) override;
+};
+
 class SingleLineComment : public ICodeState
 {
 public:

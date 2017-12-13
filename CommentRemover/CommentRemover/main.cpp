@@ -10,6 +10,7 @@ int	main(int argc, char* argv[])
 {
 	try
 	{
+		std::cout << '//';
 		ArgvParser cmdParams;
 		cmdParams.Parse(argc, argv);
 		auto remover = CommentRemoverCreator::Create(cmdParams.lang);
@@ -18,7 +19,7 @@ int	main(int argc, char* argv[])
 	}
 	catch (const std::exception& ex)
 	{
-		std::cerr << ex.what();
+		std::cerr  <<ex.what();
 	}
 
 	return 0;
